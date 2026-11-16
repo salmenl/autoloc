@@ -1,0 +1,25 @@
+$kind: http-request
+url: http://localhost:8080/client/update/1
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"idClient\": 0,\r
+
+    \  \"nom\": \"\",\r
+
+    \  \"prenom\": \"\",\r
+
+    \  \"email\": \"\",\r
+
+    \  \"telephone\": \"\",\r
+
+    \  \"numPermis\": \"\",\r
+
+    \  \"dateInscription\": \"\",\r
+
+    \  \"reservations\": []\r
+
+    }"
+order: 2000

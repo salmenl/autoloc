@@ -21,4 +21,10 @@ public class Equipement {
     String libelle;
     @ManyToMany(mappedBy = "equipements")
     private List<Vehicule> vehicules = new ArrayList<>();
+
+    public void setId(Long id) {
+    }
+
+    public Object getId() {
+    }
 }

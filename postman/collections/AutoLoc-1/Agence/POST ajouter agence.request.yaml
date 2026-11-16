@@ -1,0 +1,18 @@
+$kind: http-request
+url: http://localhost:8080/agence
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+        
+      "idAgence": 0,
+      "nom": "Agence Tunis Centre",
+      "ville": "Tunis",
+      "adresse": "Avenue Habib Bourguiba",
+      "telephone": "71000000"
+      
+    }
+order: 5000

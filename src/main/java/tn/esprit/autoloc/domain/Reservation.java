@@ -32,4 +32,7 @@ public class Reservation {
 
     @OneToOne(mappedBy = "reservation")
     private Contrat contrat;
+
+    public void setId(Long id) {
+    }
 }

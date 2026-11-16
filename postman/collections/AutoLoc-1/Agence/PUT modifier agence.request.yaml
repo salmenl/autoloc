@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:8080/agence/update/2
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"idAgence\": 2,\r
+
+    \  \"nom\": \"Agence Tunis Centre Modifiée\",\r
+
+    \  \"ville\": \"Tunis\",\r
+
+    \  \"adresse\": \"Avenue de la Liberté\",\r
+
+    \  \"telephone\": \"71111111\"\r
+
+    }"
+order: 1000

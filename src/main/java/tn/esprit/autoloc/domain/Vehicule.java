@@ -1,10 +1,11 @@
 package tn.esprit.autoloc.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,14 +40,18 @@ public class Vehicule {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private StatutVehicule statut;
+
     @ManyToOne
     @JoinColumn(name = "agence_id")
+    @JsonIgnoreProperties({"vehicules", "employes"})
     private Agence agence;
 
     @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("vehicule")
     private List<Maintenance> maintenances = new ArrayList<>();
 
     @OneToMany(mappedBy = "vehicule")
+    @JsonIgnoreProperties("vehicule")
     private List<Reservation> reservations = new ArrayList<>();
 
     @ManyToMany
@@ -55,6 +60,14 @@ public class Vehicule {
             joinColumns = @JoinColumn(name = "vehicule_id"),
             inverseJoinColumns = @JoinColumn(name = "equipement_id")
     )
+    @JsonIgnoreProperties("vehicules")
     private List<Equipement> equipements = new ArrayList<>();
 
+    public Long getId() {
+        return idVehicule;
+    }
+
+    public void setId(Long id) {
+        this.idVehicule = id;
+    }
 }

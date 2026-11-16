@@ -1,4 +1,7 @@
 package tn.esprit.autoloc.repositories;
 
-public interface Contratrepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import tn.esprit.autoloc.domain.Contrat;
+
+public interface ContratRepository extends JpaRepository<Contrat, Long> {
 }

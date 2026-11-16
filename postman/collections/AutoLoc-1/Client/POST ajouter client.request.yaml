@@ -1,0 +1,25 @@
+$kind: http-request
+url: http://localhost:8080/client
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"idClient\": 0,\r
+
+    \  \"nom\": \"rahma\",\r
+
+    \  \"prenom\": \"benhamouda\",\r
+
+    \  \"email\": \"rahmabenhamouda@gmail.com\",\r
+
+    \  \"telephone\": \"56804493\",\r
+
+    \  \"numPermis\": \"5\",\r
+
+    \  \"dateInscription\": \"2003-09-09\",\r
+
+    \  \"reservations\": []\r
+
+    }"
+order: 5000

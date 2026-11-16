@@ -1,0 +1,16 @@
+$kind: http-request
+name: GET lister equipements
+url: " http://localhost:8080/equipement/delete/1"
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \  \"idEquipement\": 0,\r
+
+    \  \"libelle\": \"\",\r
+
+    \  \"vehicules\": []\r
+
+    }"
+order: 1000

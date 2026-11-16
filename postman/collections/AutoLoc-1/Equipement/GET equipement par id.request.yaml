@@ -1,0 +1,15 @@
+$kind: http-request
+url: " http://localhost:8080/equipement/getById/1"
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \  \"idEquipement\": 0,\r
+
+    \  \"libelle\": \"\",\r
+
+    \  \"vehicules\": []\r
+
+    }"
+order: 4000

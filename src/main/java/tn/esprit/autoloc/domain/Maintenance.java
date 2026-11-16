@@ -23,4 +23,7 @@ public class Maintenance {
     @ManyToOne
     @JoinColumn(name = "vehicule_id")
     private Vehicule vehicule;
+
+    public void setId(Long id) {
+    }
 }

@@ -27,4 +27,7 @@ public class Client {
     LocalDate dateInscription;
     @OneToMany(mappedBy = "client")
     private List<Reservation> reservations = new ArrayList<>();
+
+    public void setId(Long id) {
+    }
 }

@@ -29,4 +29,8 @@ public class Contrat {
 
     @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Paiement> paiements = new ArrayList<>();
+
+    public void setId(Long id) {
+
+    }
 }

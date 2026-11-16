@@ -24,4 +24,6 @@ public class Employe {
     @JoinColumn(name = "agence_id")
     private Agence agence;
 
+    public void setId(Long id) {
+    }
 }
